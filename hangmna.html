@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hangman Game</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    
+    h1 {
+      margin-top: 100px;
+      font-size: 36px;
+    }
+    
+    #hangman {
+      font-family: monospace;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    
+    #alphabet {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+    
+    .letter-button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    .letter-button:hover {
+      background-color: #45a049;
+    }
+    .letter-button:disabled {
+    background-color: gray !important;
+    cursor: not-allowed;
+  }
+    
+    #answer {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="question">Can you guess the word?</h1>
+  <img src="hngmn0.png" id="hangman" width="300">
+  <div id="alphabet">
+    <button id="A" class="letter-button" onclick="guessLetter('A')">A</button>
+    <button id="B" class="letter-button" onclick="guessLetter('B')">B</button>
+    <button id="C" class="letter-button" onclick="guessLetter('C')">C</button>
+    <button id="D" class="letter-button" onclick="guessLetter('D')">D</button>
+    <button id="E" class="letter-button" onclick="guessLetter('E')">E</button>
+    <button id="F" class="letter-button" onclick="guessLetter('F')">F</button>
+    <button id="G" class="letter-button" onclick="guessLetter('G')">G</button>
+    <button id="H" class="letter-button" onclick="guessLetter('H')">H</button>
+    <button id="I" class="letter-button" onclick="guessLetter('I')">I</button>
+    <button id="J" class="letter-button" onclick="guessLetter('J')">J</button>
+    <button id="K" class="letter-button" onclick="guessLetter('K')">K</button>
+    <button id="L" class="letter-button" onclick="guessLetter('L')">L</button>
+    <button id="M" class="letter-button" onclick="guessLetter('M')">M</button>
+    <button id="N" class="letter-button" onclick="guessLetter('N')">N</button><br>
+    <button id="O" class="letter-button" onclick="guessLetter('O')">O</button>
+    <button id="P" class="letter-button" onclick="guessLetter('P')">P</button>
+    <button id="Q" class="letter-button" onclick="guessLetter('Q')">Q</button>
+    <button id="R" class="letter-button" onclick="guessLetter('R')">R</button>
+    <button id="S" class="letter-button" onclick="guessLetter('S')">S</button>
+    <button id="T" class="letter-button" onclick="guessLetter('T')">T</button>
+    <button id="U" class="letter-button" onclick="guessLetter('U')">U</button>
+    <button id="V" class="letter-button" onclick="guessLetter('V')">V</button>
+    <button id="W" class="letter-button" onclick="guessLetter('W')">W</button>
+    <button id="X" class="letter-button" onclick="guessLetter('X')">X</button>
+    <button id="Y" class="letter-button" onclick="guessLetter('Y')">Y</button>
+    <button id="Z" class="letter-button" onclick="guessLetter('Z')">Z</button>
+  </div>
+  <br>
+  <button onclick="startGame()">Start Game</button>
+  <div id="answer"></div>
+  
+  <script>
+    var questions = [
+      "What is the capital of France?",
+      "What is the name of NBA team of New York?",
+      "What is the largest Mammal?",
+      "Who wrote the album Yeezus?",
+      "Who is the main protagonist of Code Geass?"
+      // Add more questions here
+    ];
+    var answers = [
+      "PARIS",
+      "KNICKS",
+      "WHALE",
+      "KANYE",
+      "LELOUCH",
+      // Add corresponding answers here
+    ];
+    var chosenQuestionIndex;
+    var chosenAnswer;
+    var emptyBoxes = [];
+    var mistake = 0;
+    
+    function startGame() {
+      chosenQuestionIndex = Math.floor(Math.random() * questions.length);
+      var question = questions[chosenQuestionIndex];
+      chosenAnswer = answers[chosenQuestionIndex];
+      document.getElementById("question").textContent = question;
+      displayEmptyBoxes(chosenAnswer);
+      mistake = 0;
+      document.getElementById('hangman').src = 'hngmn0.png';
+      resetButtons();
+    }
+    function resetButtons() {
+      var buttons = document.getElementsByClassName("letter-button");
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = "#4CAF50";
+        buttons[i].disabled = false;
+      }
+    }
+    function displayEmptyBoxes(answer) {
+      emptyBoxes = [];
+      for (var i = 0; i < answer.length; i++) {
+        emptyBoxes.push("_");
+      }
+      document.getElementById("answer").textContent = emptyBoxes.join(" ");
+    }
+    
+    function guessLetter(letter) {
+      var isLetterFound = false;
+      for (var i = 0; i < chosenAnswer.length; i++) {
+        if (chosenAnswer[i] === letter) {
+          emptyBoxes[i] = letter;
+          isLetterFound = true;
+        }
+      }
+      
+      if (!isLetterFound) {
+        drawHangMan();
+      }
+      
+      document.getElementById("answer").textContent = emptyBoxes.join(" ");
+      document.getElementById(letter).disabled=true;
+    }
+    
+    function drawHangMan() {
+      mistake++;
+      var hangman = document.getElementById('hangman');
+      hangman.src = 'hngmn' + mistake + '.png';
+      if(mistake==6) {window.alert("Game Over. The answer was: " + chosenAnswer);}
+    }
+  </script>
+</body>
+</html>

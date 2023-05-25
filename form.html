@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Lab3</title>
+    <style>
+      .menu{
+        background-color: #d8d6d6;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav ul li {
+        margin: 25px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+      main {
+        max-width: 80%;
+        margin: auto;
+        padding: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+      }
+      .news {
+        margin-right: 20px;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 600px;
+        background-color: rgb(137, 182, 196);
+        
+        overflow: auto;
+      }
+      section {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 600px;
+        background-color: rgb(137, 182, 196);
+        display: flex;
+        justify-content: center;
+      }
+      ul {
+        margin-left: 20px;
+      }
+      a {
+        background-color: rgb(137, 182, 196);
+        color: rgb(7, 7, 7);
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      a:hover {
+        background-color: rgb(182, 194, 217);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <h1>Welcome to University of Tselmeg</h1>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="window.location.href='home.html';">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Admissions</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" onclick="window.location.href='form.html';">Form</a></li>
+        </ul>
+    </div>
+    <main>
+      <div class="news">
+        About Form <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus euismod sapien, vel feugiat neque auctor ac. Etiam semper tellus vitae erat vestibulum, id sollicitudin magna bibendum. Nulla facilisi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus euismod sapien, vel feugiat neque auctor ac. Etiam semper tellus vitae erat vestibulum, id sollicitudin magna bibendum. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus euismod sapien, vel feugiat neque auctor ac. Etiam semper tellus vitae erat vestibulum, id sollicitudin magna bibendum. Nulla facilisi. <br>
+        
+      </div>
+      <section>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" pattern="[A-Za-z]" title="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" pattern="[A-Za-z]" title="lname"> <br>
+            <label for="age">Age:</label><br>
+            <input type="text" id="age" name="age" pattern="[0-9]" title="age"> <br>
+            <label for="gend">Gender:</label><br>
+            <input type="text" id="gend" name="gend" pattern="[A-Za-z]{1}" title="gend"> <br>
+            <label for="date">Birth Date:</label><br>
+            <input type="date" id="start" name="date
+               value="2003-07-01"
+               min="1900-01-01" max="2023-12-31"> <br>
+            <label for="hs">High School:</label><br>
+            <input type="text" id="hs" name="hs" pattern="[A-Za-z]" title="hs"> <br>
+            <label for="pro">Province:</label><br>
+            <input type="text" id="pro" name="pro" pattern="[A-Za-z]" title="pro"> <br>
+            <label for="sd">sum/duureg:</label><br>
+            <input type="text" id="sd" name="sd" pattern="[A-Za-z]" title="sd"> <br>
+            <label for="em">Email:</label><br>
+            <input type="email" id="em" name="em" title="em"> <br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd"> <br>
+            <label for="age">Number:</label><br>
+            <input type="text" id="num" name="num" pattern="[0-9]" title="num"> <br>
+            <label for="uni">University:</label><br>
+            <input type="text" id="uni" name="uni" pattern="[A-Za-z]" title="uni"> <br>
+            <label for="hs">Major:</label><br>
+            <input type="text" id="maj" name="maj" pattern="[A-Za-z]" title="maj"> <br><br>
+            <input type="button" value="Submit">
+          </form>
+      </section>
+    </main>
+  </body>

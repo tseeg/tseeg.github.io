@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CurrencyConverter</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+      .calculator {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        padding: 10px;
+        max-width: 400px;
+        margin: auto;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .calculator__display {
+        grid-column: span 4;
+        height: 60px;
+        padding: 5px;
+        text-align: right;
+        background-color: #eee;
+        border-radius: 5px;
+        font-size: 30px;
+      }
+      .button {
+        height: 60px;
+        border: none;
+        background-color: #4CAF50;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #3e8e41;
+      }
+      .span-2 {
+        grid-column: span 2;
+      }
+      .radio-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="calculator__display" id="display"></div>
+      <button class="button all_clear">AC</button>
+      <button class="button">%</button>
+      <button class="button">÷</button>
+      <button class="button clear"><-</button>
+      <button class="button num">7</button>
+      <button class="button num">8</button>
+      <button class="button num">9</button>
+      <button class="button ">x</button>
+      <button class="button num">4</button>
+      <button class="button num">5</button>
+      <button class="button num">6</button>
+      <button class="button">-</button>
+      <button class="button num">1</button>
+      <button class="button num">2</button>
+      <button class="button num">3</button>
+      <button class="button">.</button>
+      <button class="button span-2">+</button>
+      <button class="button num">0</button>
+      <button class="button" id="convert">=</button>
+    </div>
+    <div class="radio-buttons">
+      <input type="radio" id="usd" name="currency" value="USD"> USD
+      <input type="radio" id="euro" name="currency" value="EURO"> EURO
+      <input type="radio" id="pound" name="currency" value="POUND"> POUND
+      <input type="radio" id="won" name="currency" value="WON"> WON
+      <input type="radio" id="yen" name="currency" value="YEN"> YEN
+      <input type="radio" id="yan" name="currency" value="YAN"> YAN
+    </div>
+    <script>
+      const display = document.getElementById("display");
+      const buttons = document.querySelectorAll(".num");
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const buttonText = button.innerText;
+          display.innerText += buttonText;
+        });
+      });
+      let usd = document.getElementById('usd');
+      let euro = document.getElementById('euro');
+      let pound = document.getElementById('pound');
+      let won = document.getElementById('won');
+      let yen = document.getElementById('yen');
+      let yan = document.getElementById('yan');
+      let s = 2;
+      const clearButton = document.querySelector(".clear");
+      clearButton.addEventListener("click", () => {
+        display.innerText = display.innerText.slice(0, -1);
+      });
+
+      const allClearButton = document.querySelector(".all_clear");
+      allClearButton.addEventListener("click", () => {
+        display.innerText = "";
+      });
+
+      const convertButton = document.getElementById("convert");
+      convertButton.addEventListener("click", () => {
+        const currentValue = parseFloat(display.innerText);
+        if(usd.checked==true){
+        s = 2870;
+      };
+      if(euro.checked==true){
+        s = 3120;
+      };
+      if(pound.checked==true){
+        s = 3500;
+      };
+      if(won.checked==true){
+        s = 2.3;
+      };
+      if(yen.checked==true){
+        s = 123;
+      };
+      if(yan.checked==true){
+        s = 11;
+      };
+        display.innerText = (currentValue * s).toString();
+      });
+
+    </script>
+  </body>
+</html>
+

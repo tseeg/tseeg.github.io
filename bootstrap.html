@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Webjunto</title>
+    <style>
+      @media only screen and (max-width: 480px)
+{
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container
+{
+	margin: 0px auto;
+	width: 100%;
+}
+.top
+{
+	width: 100%;
+	height: 60px;
+	background-color: #1b1b6c;
+}
+.top img
+{
+    height: 32px;
+    margin: 16px;
+    filter: brightness(10);
+}
+.head
+{
+	width: 100%;
+	height: 220px;
+	background-color: #13124f;
+}
+.head-container
+{
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+h1
+{
+	color: white;
+	font-size: 35px;
+}
+.bootstrap
+{
+	color: white;
+	font-size: 14px;
+	margin-top: 5px;
+}
+.learn
+{
+	margin-top: 30px;
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 70px;
+	padding: 5px 10px 5px 10px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.learn:hover
+{
+	background-color: #ff4a8f;
+}
+.more
+{
+	color: white;
+	text-decoration: none;
+	font-size: 10px;
+}
+.main
+{
+	height: 510px;
+	width: 100%;
+	background-color: white;
+}
+.main-container
+{
+	padding: 40px 15px 20px 15px;
+}
+h2
+{
+	font-size: 20px;
+}
+hr
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.cupcake
+{
+	color: rgb(47, 47, 47);
+	font-size: 12px;
+}
+iframe
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 140px;
+}
+.grey
+{
+	font-size: 12px;
+	border: 1px solid #9090A5;
+	background-color: #9090A5;
+	padding: 10px;
+	color: white;
+}
+.sidebar
+{
+	height: 520px;
+	width: 100%;
+	background-color: white;
+}
+.sidebar-container
+{
+	padding: 30px 15px 10px 15px;
+}
+.msg-container
+{
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 100%;
+	cursor: pointer;
+	transition: 0.5s;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.message
+{
+	padding: 10px 15px 10px 15px;
+}
+.msg-container:hover
+{
+	background-color: #ff4a8f;
+}
+.msg
+{
+	color: white;
+	text-decoration: none;
+	font-size: 10px;
+}
+.three
+{
+	border: 1px solid #1b1b6c;
+	border-radius: 100%;
+	background-color: #1b1b6c;
+	color: white;
+	padding: 1px 6px 1px 6px;
+}
+.table-container
+{
+	width: 100%;
+}
+.sidebar-one
+{
+	background-color: #9090A5;
+	padding: 12px 0 10px 15px;
+	color: white;
+	font-size: 10px;
+}
+.sidebar-two
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+	font-size: 10px;
+}
+.input
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+	font-size: 10px;
+}
+.greet-container
+{
+	width: 100%;
+	background-color: #9090A5;
+}
+.greet
+{
+	border: none;
+	font-size: 10px;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+	background-color: #1b1b6c;
+}
+.send
+{
+	width: 100%;
+	color: white;
+	background-color: #F61067;
+	padding: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+	font-size: 10px;
+}
+.send:hover
+{
+	background-color: #ff4a8f;
+}
+.star
+{
+	background-color: #28288f;
+	text-align: center;
+	font-size: 8px;
+	padding: 10px;
+}
+.star a
+{
+	color: white;
+}
+.vote
+{
+	margin-top: 25px;
+	padding: 15px;
+	border: 1px solid #9090A5;
+	font-size: 10px;
+}
+.ygaan
+{
+	width: 100%;
+	margin-top: 15px;
+}
+.one
+{
+	background-color: #F61067;
+	color: #F61067;
+	text-align: center;
+	width: 65%;
+	font-size: 8px;
+}
+.two 
+{
+	background-color: #2ad392;
+	color: #2ad392;
+	text-align: center;
+	width: 35%;
+	font-size: 8px;
+}
+.poll
+{
+	margin-top: 15px;
+	width: 100%;
+}
+.red
+{
+	background-color: #F61067;
+	color: white;
+	text-align: center;
+	font-size: 10px;
+	cursor: pointer;
+	transition: 0.8s;
+	padding: 5px;
+}
+.red:hover
+{
+	background-color: #ff4a8f;
+}
+.green
+{
+	border: 3px solid #2ad392;
+	color: #2ad392;
+	text-align: center;
+	clear: right;
+	font-size: 10px;
+	cursor: pointer;
+	transition: 0.8s;
+	padding: 5px;
+}
+.green:hover
+{
+	background-color: #bcfce4;
+}
+.bottom
+{
+	clear: left;
+	width: 100%;
+	height: 50px;
+	background-color: #13124f;
+}
+.footer
+{
+	padding: 20px 0 0 40px;
+	color: white;
+	font-size: 10px;
+}
+}
+@media only screen and (min-width: 480px) and (max-width: 768px)
+{
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container
+{
+	margin: 0px auto;
+	width: 100%;
+}
+.top
+{
+	width: 100%;
+	height: 60px;
+	background-color: #1b1b6c;
+}
+.top img
+{
+    height: 32px;
+    margin: 16px;
+    filter: brightness(10);
+}
+.head
+{
+	width: 100%;
+	height: 300px;
+	background-color: #13124f;
+}
+.head-container
+{
+	padding-top: 70px;
+	padding-left: 40px;
+}
+h1
+{
+	color: white;
+	font-size: 50px;
+}
+.bootstrap
+{
+	color: white;
+	font-size: 16px;
+	margin-top: 5px;
+}
+.learn
+{
+	margin-top: 30px;
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 88px;
+	padding: 8px 15px 8px 15px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.learn:hover
+{
+	background-color: #ff4a8f;
+}
+.more
+{
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+.main
+{
+	height: 600px;
+	width: 100%;
+	background-color: white;
+}
+.main-container
+{
+	padding: 40px 10px 20px 10px;
+}
+h2
+{
+	font-size: 30px;
+}
+hr
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.cupcake
+{
+	color: rgb(47, 47, 47);
+	font-size: 14px;
+}
+iframe
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 240px;
+}
+.grey
+{
+	border: 1px solid #9090A5;
+	background-color: #9090A5;
+	padding: 10px;
+	color: white;
+}
+.sidebar
+{
+	height: 560px;
+	width: 100%;
+	background-color: white;
+}
+.sidebar-container
+{
+	padding: 30px 10px 10px 10px;
+}
+.msg-container
+{
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 100%;
+	cursor: pointer;
+	transition: 0.5s;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.message
+{
+	padding: 10px 15px 10px 15px;
+}
+.msg-container:hover
+{
+	background-color: #ff4a8f;
+}
+.msg
+{
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+.three
+{
+	border: 1px solid #1b1b6c;
+	border-radius: 100%;
+	background-color: #1b1b6c;
+	color: white;
+	padding: 1px 6px 1px 6px;
+}
+.table-container
+{
+	width: 100%;
+}
+.sidebar-one
+{
+	background-color: #9090A5;
+	padding: 12px 0 10px 15px;
+	color: white;
+}
+.sidebar-two
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+}
+.input
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+}
+.greet-container
+{
+	width: 100%;
+	background-color: #9090A5;
+}
+.greet
+{
+	border: none;
+	font-size: 15px;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+	background-color: #1b1b6c;
+}
+.send
+{
+	width: 100%;
+	color: white;
+	background-color: #F61067;
+	padding: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.send:hover
+{
+	background-color: #ff4a8f;
+}
+.star
+{
+	background-color: #28288f;
+	text-align: center;
+	font-size: 11px;
+	padding: 10px;
+}
+.star a
+{
+	color: white;
+}
+.vote
+{
+	margin-top: 25px;
+	padding: 15px;
+	border: 1px solid #9090A5;
+}
+.ygaan
+{
+	width: 100%;
+	margin-top: 15px;
+}
+.one
+{
+	background-color: #F61067;
+	color: #F61067;
+	text-align: center;
+	width: 65%;
+	font-size: 10px;
+}
+.two 
+{
+	background-color: #2ad392;
+	color: #2ad392;
+	text-align: center;
+	width: 35%;
+	font-size: 10px;
+}
+.poll
+{
+	margin-top: 15px;
+	width: 100%;
+}
+.red
+{
+	background-color: #F61067;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.red:hover
+{
+	background-color: #ff4a8f;
+}
+.green
+{
+	border: 3px solid #2ad392;
+	color: #2ad392;
+	text-align: center;
+	clear: right;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.green:hover
+{
+	background-color: #bcfce4;
+}
+.bottom
+{
+	clear: left;
+	width: 100%;
+	height: 50px;
+	background-color: #13124f;
+}
+.footer
+{
+	padding: 20px 0 0 40px;
+	color: white;
+	font-size: 15px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 940px)
+{
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container
+{
+	margin: 0px auto;
+	width: 100%;
+}
+.top
+{
+	width: 100%;
+	height: 60px;
+	background-color: #1b1b6c;
+}
+.top img
+{
+    height: 32px;
+    margin: 16px;
+    filter: brightness(10);
+}
+.head
+{
+	width: 100%;
+	height: 330px;
+	background-color: #13124f;
+}
+.head-container
+{
+	padding-top: 70px;
+	padding-left: 40px;
+}
+h1
+{
+	color: white;
+	font-size: 78px;
+}
+.bootstrap
+{
+	color: white;
+	font-size: 17px;
+	margin-top: 5px;
+}
+.learn
+{
+	margin-top: 30px;
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 88px;
+	padding: 10px 15px 10px 15px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.learn:hover
+{
+	background-color: #ff4a8f;
+}
+.more
+{
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+.main
+{
+	height: 700px;
+	width: 100%;
+	background-color: white;
+}
+.main-container
+{
+	padding: 65px 40px 20px 40px;
+}
+h2
+{
+	font-size: 40px;
+}
+hr
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.cupcake
+{
+	color: rgb(47, 47, 47);
+}
+iframe
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 320px;
+}
+.grey
+{
+	border: 1px solid #9090A5;
+	background-color: #9090A5;
+	padding: 10px;
+	color: white;
+}
+.sidebar
+{
+	height: 550px;
+	width: 100%;
+	background-color: white;
+}
+.sidebar-container
+{
+	padding: 40px;
+}
+.msg-container
+{
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 100%;
+	cursor: pointer;
+	transition: 0.5s;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.message
+{
+	padding: 10px 15px 10px 15px;
+}
+.msg-container:hover
+{
+	background-color: #ff4a8f;
+}
+.msg
+{
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+.three
+{
+	border: 1px solid #1b1b6c;
+	border-radius: 100%;
+	background-color: #1b1b6c;
+	color: white;
+	padding: 1px 6px 1px 6px;
+}
+.table-container
+{
+	width: 100%;
+}
+.sidebar-one
+{
+	background-color: #9090A5;
+	padding: 12px 0 10px 15px;
+	color: white;
+}
+.sidebar-two
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+}
+.input
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+}
+.greet-container
+{
+	width: 100%;
+	background-color: #9090A5;
+}
+.greet
+{
+	border: none;
+	font-size: 15px;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+	background-color: #1b1b6c;
+}
+.send
+{
+	width: 100%;
+	color: white;
+	background-color: #F61067;
+	padding: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.send:hover
+{
+	background-color: #ff4a8f;
+}
+.star
+{
+	background-color: #28288f;
+	text-align: center;
+	font-size: 11px;
+	padding: 10px;
+}
+.star a
+{
+	color: white;
+}
+.vote
+{
+	margin-top: 25px;
+	padding: 15px;
+	border: 1px solid #9090A5;
+}
+.ygaan
+{
+	width: 100%;
+	margin-top: 15px;
+}
+.one
+{
+	background-color: #F61067;
+	color: #F61067;
+	text-align: center;
+	width: 65%;
+	font-size: 10px;
+}
+.two 
+{
+	background-color: #2ad392;
+	color: #2ad392;
+	text-align: center;
+	width: 35%;
+	font-size: 10px;
+}
+.poll
+{
+	margin-top: 15px;
+	width: 100%;
+}
+.red
+{
+	background-color: #F61067;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.red:hover
+{
+	background-color: #ff4a8f;
+}
+.green
+{
+	border: 3px solid #2ad392;
+	color: #2ad392;
+	text-align: center;
+	clear: right;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.green:hover
+{
+	background-color: #bcfce4;
+}
+.bottom
+{
+	clear: left;
+	width: 100%;
+	height: 50px;
+	background-color: #13124f;
+}
+.footer
+{
+	padding: 20px 0 0 40px;
+	color: white;
+	font-size: 15px;
+}
+}
+@media only screen and (min-width: 940px) and (max-width: 1518px)
+{
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container
+{
+	margin: 0px auto;
+	width: 100%;
+}
+.top
+{
+	width: 100%;
+	height: 60px;
+	background-color: #1b1b6c;
+}
+.top img
+{
+    height: 32px;
+    margin: 16px;
+    filter: brightness(10);
+}
+.head
+{
+	width: 100%;
+	height: 330px;
+	background-color: #13124f;
+}
+.head-container
+{
+	padding-top: 70px;
+	padding-left: 40px;
+}
+h1
+{
+	color: white;
+	font-size: 78px;
+}
+.bootstrap
+{
+	color: white;
+	font-size: 17px;
+	margin-top: 5px;
+}
+.learn
+{
+	margin-top: 30px;
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 88px;
+	padding: 10px 15px 10px 15px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.learn:hover
+{
+	background-color: #ff4a8f;
+}
+.more
+{
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+.main
+{
+	float: left;
+	height: 750px;
+	width: calc(100% - 400px);
+	background-color: white;
+}
+.main-container
+{
+	padding: 65px 20px 20px 42px;
+}
+h2
+{
+	font-size: 40px;
+}
+hr
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.cupcake
+{
+	color: rgb(47, 47, 47);
+}
+iframe
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 300px;
+}
+.grey
+{
+	border: 1px solid #9090A5;
+	background-color: #9090A5;
+	padding: 20px;
+	color: white;
+}
+.sidebar
+{
+	height: 750px;
+	width: 400px;
+	background-color: white;
+	float: left;
+}
+.sidebar-container
+{
+	padding: 40px 20px 10px 20px;
+}
+.msg-container
+{
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 100%;
+	cursor: pointer;
+	transition: 0.5s;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.message
+{
+	padding: 10px 15px 10px 15px;
+}
+.msg-container:hover
+{
+	background-color: #ff4a8f;
+}
+.msg
+{
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+.three
+{
+	border: 1px solid #1b1b6c;
+	border-radius: 100%;
+	background-color: #1b1b6c;
+	color: white;
+	padding: 1px 6px 1px 6px;
+}
+.table-container
+{
+	width: 100%;
+}
+.sidebar-one
+{
+	background-color: #9090A5;
+	padding: 15px;
+	color: white;
+}
+.sidebar-two
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+}
+.input
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+}
+.greet-container
+{
+	width: 100%;
+	background-color: #9090A5;
+}
+.greet
+{
+	border: none;
+	font-size: 15px;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+	background-color: #1b1b6c;
+}
+.send
+{
+	width: 100%;
+	color: white;
+	background-color: #F61067;
+	padding: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.send:hover
+{
+	background-color: #ff4a8f;
+}
+.star
+{
+	background-color: #28288f;
+	text-align: center;
+	font-size: 11px;
+	padding: 10px;
+}
+.star a
+{
+	color: white;
+}
+.vote
+{
+	margin-top: 25px;
+	padding: 15px;
+	border: 1px solid #9090A5;
+}
+.ygaan
+{
+	width: 100%;
+	margin-top: 15px;
+}
+.one
+{
+	background-color: #F61067;
+	color: #F61067;
+	text-align: center;
+	width: 65%;
+	font-size: 10px;
+}
+.two 
+{
+	background-color: #2ad392;
+	color: #2ad392;
+	text-align: center;
+	width: 35%;
+	font-size: 10px;
+}
+.poll
+{
+	margin-top: 15px;
+	width: 100%;
+}
+.red
+{
+	background-color: #F61067;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.red:hover
+{
+	background-color: #ff4a8f;
+}
+.green
+{
+	border: 3px solid #2ad392;
+	color: #2ad392;
+	text-align: center;
+	clear: right;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.green:hover
+{
+	background-color: #bcfce4;
+}
+.bottom
+{
+	clear: left;
+	width: 100%;
+	height: 50px;
+	background-color: #13124f;
+}
+.footer
+{
+	padding: 20px 0 0 40px;
+	color: white;
+	font-size: 15px;
+}
+}
+
+@media only screen and (min-width: 1519px)
+{
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container
+{
+	margin: 0px auto;
+	width: 1519px;
+}
+.top
+{
+	width: 100%;
+	height: 60px;
+	background-color: #1b1b6c;
+}
+.top img
+{
+    height: 32px;
+    margin: 16px;
+    filter: brightness(10);
+}
+.head
+{
+	width: 100%;
+	height: 330px;
+	background-color: #13124f;
+}
+.head-container
+{
+	padding-top: 70px;
+	padding-left: 40px;
+}
+h1
+{
+	color: white;
+	font-size: 78px;
+}
+.bootstrap
+{
+	color: white;
+	font-size: 17px;
+	margin-top: 5px;
+}
+.learn
+{
+	margin-top: 30px;
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 88px;
+	padding: 10px 15px 10px 15px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.learn:hover
+{
+	background-color: #ff4a8f;
+}
+.more
+{
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+.main
+{
+	float: left;
+	height: 900px;
+	width: calc(100% - 480px);
+	background-color: white;
+}
+.main-container
+{
+	padding: 65px 20px 20px 42px;
+}
+h2
+{
+	font-size: 40px;
+}
+hr
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.cupcake
+{
+	color: rgb(47, 47, 47);
+}
+iframe
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 100%;
+	height: 490px;
+}
+.grey
+{
+	border: 1px solid #9090A5;
+	background-color: #9090A5;
+	padding: 20px;
+	color: white;
+}
+.sidebar
+{
+	height: 900px;
+	width: 480px;
+	background-color: white;
+	float: left;
+}
+.sidebar-container
+{
+	padding: 40px 20px 10px 20px;
+}
+.msg-container
+{
+	border: 1px solid #F61067;
+	background-color: #F61067;
+	width: 100%;
+	cursor: pointer;
+	transition: 0.5s;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.message
+{
+	padding: 10px 15px 10px 15px;
+}
+.msg-container:hover
+{
+	background-color: #ff4a8f;
+}
+.msg
+{
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+.three
+{
+	border: 1px solid #1b1b6c;
+	border-radius: 100%;
+	background-color: #1b1b6c;
+	color: white;
+	padding: 1px 6px 1px 6px;
+}
+.table-container
+{
+	width: 100%;
+}
+.sidebar-one
+{
+	background-color: #9090A5;
+	padding: 15px;
+	color: white;
+}
+.sidebar-two
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+}
+.input
+{
+	background-color: #13124f;
+	padding: 15px;
+	color: white;
+}
+.greet-container
+{
+	width: 100%;
+	background-color: #9090A5;
+}
+.greet
+{
+	border: none;
+	font-size: 15px;
+	width: 90%;
+	padding: 5px 26px 5px 15px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+	background-color: #1b1b6c;
+}
+.send
+{
+	width: 100%;
+	color: white;
+	background-color: #F61067;
+	padding: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.send:hover
+{
+	background-color: #ff4a8f;
+}
+.star
+{
+	background-color: #28288f;
+	text-align: center;
+	font-size: 11px;
+	padding: 10px;
+}
+.star a
+{
+	color: white;
+}
+.vote
+{
+	margin-top: 25px;
+	padding: 15px;
+	border: 1px solid #9090A5;
+}
+.ygaan
+{
+	width: 100%;
+	margin-top: 15px;
+}
+.one
+{
+	background-color: #F61067;
+	color: #F61067;
+	text-align: center;
+	width: 65%;
+	font-size: 10px;
+}
+.two 
+{
+	background-color: #2ad392;
+	color: #2ad392;
+	text-align: center;
+	width: 35%;
+	font-size: 10px;
+}
+.poll
+{
+	margin-top: 15px;
+	width: 100%;
+}
+.red
+{
+	background-color: #F61067;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.red:hover
+{
+	background-color: #ff4a8f;
+}
+.green
+{
+	border: 3px solid #2ad392;
+	color: #2ad392;
+	text-align: center;
+	clear: right;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.8s;
+}
+.green:hover
+{
+	background-color: #bcfce4;
+}
+.bottom
+{
+	clear: left;
+	width: 100%;
+	height: 50px;
+	background-color: #13124f;
+}
+.footer
+{
+	padding: 20px 0 0 40px;
+	color: white;
+	font-size: 15px;
+}
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top"><img src="img/webjunto" alt="webjunto" /></div>
+      <div class="head">
+        <div class="head-container">
+          <h1>Hello, world!</h1>
+          <p class="bootstrap">
+            Welcome to Bootstrap v3.3.7.Check out this awesome jumbotron!
+          </p>
+          <div class="learn"><a class="more" href="#">LEARN MORE</a></div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="main-container">
+          <h2>Heading goes here</h2>
+          <hr />
+          <p class="cupcake">
+            Cupcake ipsum dolor sit amet bear claw chocolate cake. Apple pie
+            cookie shortbread brownie marzipan shortbread jelly tootsie roll.
+            Dragée dragée chocolate bar ice cream ice cream fruitcake. Jujubes
+            carrot cake brownie chupa chups powder. Cupcake ipsum dolor sit amet
+            dragée dragée sweet bear claw. Toffee biscuit brownie macaroon
+            tootsie roll marzipan lemon drops.
+          </p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div class="grey">
+            <i class="fa fa-exclamation-circle"></i>&nbsp&nbsp&nbspWhoa! this is
+            a super important alert!
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-container">
+          <div class="msg-container">
+            <div class="message">
+              <a class="msg" href="#"
+                ><i class="fa fa-envelope"></i>&nbsp&nbsp&nbspMESSAGES</a
+              >&nbsp
+              <b class="three"><b>3</b></b>
+            </div>
+          </div>
+          <div class="table-container">
+            <div class="table">
+              <p class="sidebar-one">Welcome Candidate!</p>
+              <p class="sidebar-two">
+                You are Starfleet Academy candidate. Greet the Captain in a
+                <i>respectful</i>fashion.
+              </p>
+              <form class="input">
+                <div class="greet-container">
+                  <input
+                    class="greet"
+                    type="text"
+                    placeholder="&nbsp&nbsp&nbsp Input your greeting.."
+                  />
+                </div>
+                <br />
+                <input class="send" type="submit" value="SEND" />
+              </form>
+              <div class="star">
+                <a href="#"
+                  >I don't watch Star Trek and don't get this reference</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="vote">
+            <p>
+              Cast your vote! What do you think about space? See vote progress
+              bar below!
+            </p>
+            <table class="ygaan">
+              <tr>
+                <td class="one">1</td>
+                <td class="two">2</td>
+              </tr>
+            </table>
+            <table class="poll">
+              <tr>
+                <td class="red" href="#">COOL</td>
+                <td class="green" href="#">LAME</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p class="footer">2017 All Rights Reserved,SomeCompany.</p>
+      </div>
+    </div>
+  </body>
+</html>

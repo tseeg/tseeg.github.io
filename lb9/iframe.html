@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Window</title>
+    <style>
+      /* CSS styles for the new window */
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="radio" id="usd" name="currency" value="USD"> USD
+      <input type="radio" id="euro" name="currency" value="EURO"> EURO
+      <input type="radio" id="pound" name="currency" value="POUND"> POUND
+      <input type="radio" id="won" name="currency" value="WON"> WON
+      <input type="radio" id="yen" name="currency" value="YEN"> YEN
+      <input type="radio" id="yan" name="currency" value="YAN"> YAN
+    </div>
+    <script>
+      let usd = document.getElementById('usd');
+      let euro = document.getElementById('euro');
+      let pound = document.getElementById('pound');
+      let won = document.getElementById('won');
+      let yen = document.getElementById('yen');
+      let yan = document.getElementById('yan');
+      let s = 1;
+      passValueToParent(s);
+      if(usd.checked){
+        s = 2870;
+        passValueToParent(s);
+        self.close();
+      };
+      if(euro.checked){
+        s = 3120;
+        passValueToParent(s);
+        self.close();
+      };
+      if(pound.checked){
+        s = 3500;
+        passValueToParent(s);
+        self.close();
+      };
+      if(won.checked){
+        s = 2.3;
+        passValueToParent(s);
+        self.close();
+      };
+      if(yen.checked){
+        s = 123;
+        passValueToParent(s);
+        self.close();
+      };
+      if(yan.checked){
+        s = 11;
+        passValueToParent(s);
+        self.close();
+      };
+
+      function passValueToParent(value) {
+        parent.postMessage(value, "*");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sum Digits</title>
+  </head>
+  <body>
+    <h1>Sum Digit</h1>
+    <label for="name">Enter your number:</label>
+    <input type="number" id="num" />
+    <button onclick="findSum()">Check</button>
+    <p id="result"></p>
+    
+    <script>
+      function findSum() {
+        const num = document.getElementById("num");
+        var n=parseInt(num.value);
+        var sum=0;
+        while(n>0)
+        {
+            sum+=n%10;
+            n=Math.floor(n/10);
+        }
+        document.getElementById("result").innerHTML = "Sum of digits is " + sum;
+      }
+    </script>
+  </body>
+</html>

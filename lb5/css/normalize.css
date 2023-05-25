@@ -1,0 +1,256 @@
+*
+{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.responsive-header
+{
+    display: none;
+}
+body
+{
+    max-width: 1550px;
+    display: grid;
+    grid-template-areas: 
+    "sidebar sidebar sidebar top top top top top top top top top"
+    "sidebar sidebar sidebar main main main main main main main main main";
+
+}
+.sidebar-menu
+{
+    grid-area: sidebar;
+    background-color: #44718f;
+    padding: 0px
+}
+.sidebar-menu img
+{
+    border-radius: 100%;
+    width: 110px;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: 1s;
+}
+.sidebar-menu img:hover
+{
+    border: 3px solid #44718f;
+}
+.top-section
+{
+    padding: 30px 130px 20px 30px;
+}
+.profile-title
+{
+    font-size: 15px;
+    margin-top: 10px;
+    color: white;
+}
+.profile-description
+{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    color: white;
+}
+.main-navigation a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+.main-navigation li
+{
+    list-style-type: none;
+    border-width: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.navigation li:hover
+{
+    background-color: #44718f;
+}
+.main-navigation a i
+{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 14px;
+    font-size: 18px;
+    margin-left: 30px;
+}
+.social-icons ul li
+{
+    display: inline;
+    margin-right: 15px;
+}
+.social-icons
+{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.social-icons i
+{
+    color: white;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.social-icons a i:hover
+{
+    color: #2e343c;
+}
+.main-content
+{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.about-image img
+{
+    width: 100%;
+    border: 3px solid rgb(221, 221, 221);
+    cursor: pointer;
+    transition: 1s;
+}
+.about-image img:hover
+{
+    border-color: #44718f;
+}
+h4
+{
+    margin-bottom: 30px;
+    margin-top: 60px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #44718f;
+}
+.inside
+{
+    display: none;
+}
+.projects-holder
+{
+    max-width: 1072px;
+    overflow: auto;
+    margin-bottom: 30px;
+}
+.project-item
+{
+    border: none;
+    float: left;
+    width: 357px;
+}
+.project-item img
+{
+    width: 99%;
+    height: auto;
+    margin-bottom: -2px;
+    margin-right: 3px;
+}
+.col-md-12 p
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 12px;
+    color: rgb(129, 129, 129);
+}
+.col-md-12 p a
+{
+    text-decoration: none;
+    color: #44718f;
+}
+hr
+{
+    height: 2px;
+    background-color: rgb(221, 221, 221);
+}
+#top
+{
+    grid-area: top;
+    min-height: 400px;
+    background: linear-gradient(rgba(97, 112, 129, 0.4), rgba(97, 112, 129, 0.4)), url(../img/7.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    cursor: pointer;
+    transition: 3s;
+}
+#top h2
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+#top h5
+{
+    font-size: 16px;
+    color: white;
+}
+.main-content
+{
+    grid-area: main;
+}
+.row
+{
+    margin-bottom: 30px;
+}
+.col-md-4
+{
+    border: none;
+    display: inline;
+}
+#email
+{
+    margin-right: 20px;
+}
+#your-name
+{
+    margin-right: 20px;
+}
+.col-md-4 input
+{
+    padding: 8px;
+    font-size: 12px;
+    width: 322px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(177, 177, 177);
+}
+.col-sm-12
+{
+    border: none;
+}
+.col-sm-12 textarea
+{
+    width: 98%;
+    height: 120px;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid rgb(177, 177, 177);
+    margin-bottom: 20px;
+}
+.button
+{
+    padding: 8px;
+    font-size: 12px;
+    color: white;
+    background-color: #44718f;
+    border: 1px solid #44718f;
+    cursor: pointer;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.button:hover
+{
+    background-color: #2e343c;
+}
+#footer
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#footer p
+{
+    font-size: 10px;
+}
